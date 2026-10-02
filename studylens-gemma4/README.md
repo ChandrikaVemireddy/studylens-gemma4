@@ -1,34 +1,57 @@
-# StudyLens — Gemma 4 Multimodal Study Assistant
+# 📚 StudyLens — AI-Powered Multimodal Study Assistant
 
-Hackathon prototype for **MLH Hacktoberfest Hack Day Hyderabad — Best Use of Gemma 4**.
+StudyLens is an AI-powered study assistant that helps students understand learning material from images.
 
-Upload a study image and StudyLens uses **Gemma 4** to explain it, extract key points, generate a short quiz, and answer a follow-up question.
+Users can upload notes, textbook pages, diagrams, or questions, and StudyLens uses the multimodal capabilities of **Gemma 4** to analyze the content and provide easy-to-understand explanations, key points, practice questions, and follow-up assistance.
 
-## Stack
-React + Vite • Python + FastAPI • Google Gen AI Python SDK • Gemma 4
+Built for the **Hacktoberfest Hack Day Hyderabad × React Hyderabad** hackathon.
 
-## Run
+---
 
-Backend:
-```bash
-cd backend
-python -m venv .venv
-# Windows: .venv\Scripts\activate
-# macOS/Linux: source .venv/bin/activate
-pip install -r requirements.txt
-copy .env.example .env
-uvicorn main:app --reload --port 8000
-```
+## ✨ Features
 
-Frontend:
-```bash
-cd frontend
-npm install
-npm run dev
-```
+- 🖼️ **Image Understanding** — Upload notes, textbook pages, diagrams, or questions.
+- 🤖 **Gemma 4 AI Analysis** — Uses Gemma 4's multimodal capabilities to understand visual content.
+- 📖 **Simple Explanations** — Converts complex material into beginner-friendly explanations.
+- 📝 **Key Points** — Extracts important information from uploaded material.
+- 🧠 **Practice Quiz** — Generates questions to help reinforce learning.
+- 💬 **Follow-up Questions** — Continue interacting with the uploaded study material.
+- 🎓 **Student-Focused** — Designed to make learning more interactive and accessible.
 
-Set `GEMINI_API_KEY` in `backend/.env`. The model defaults to `gemma-4-31b-it`.
+---
 
-Never commit `.env`.
+## 🎯 Hackathon Challenge
 
-The app has a clearly labeled demo mode when the key is absent, but the real hackathon demo should use the real Gemma 4 API.
+### Best Use of Gemma 4
+
+StudyLens demonstrates how Gemma 4's multimodal capabilities can transform static educational content into an interactive learning experience.
+
+Instead of simply reading a page of notes, students can upload the material and interact with it through explanations, key points, quizzes, and follow-up questions.
+
+---
+
+## 🏗️ How It Works
+
+```text
+                 👨‍🎓 Student
+                     │
+                     ▼
+             📸 Upload Study Image
+                     │
+                     ▼
+            ⚛️ React Frontend
+                     │
+                     ▼
+             🐍 FastAPI Backend
+                     │
+                     ▼
+                🤖 Gemma 4
+                     │
+                     ▼
+        ┌────────────┼────────────┐
+        │            │            │
+        ▼            ▼            ▼
+   📖 Explanation  📝 Key Points  🧠 Quiz
+                     │
+                     ▼
+              💬 Follow-up Chat

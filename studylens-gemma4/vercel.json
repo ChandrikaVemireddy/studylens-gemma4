@@ -2,11 +2,11 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "services": {
     "backend": {
-      "root": "studylens-gemma4/backend",
+      "root": "backend/",
       "framework": "fastapi"
     },
     "frontend": {
-      "root": "studylens-gemma4/frontend",
+      "root": "frontend/",
       "framework": "vite"
     }
   },
@@ -19,9 +19,4 @@
     },
     {
       "source": "/(.*)",
-      "destination": {
-        "service": "frontend"
-      }
-    }
-  ]
-}
+      "
